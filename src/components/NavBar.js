@@ -1,10 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./NavBar.css";
-import logo from "./cryptosat_logo.svg";
-import Menu from "./Menu.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faChevronDoubleRight } from "@fortawesome/pro-light-svg-icons";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './NavBar.css';
+import logo from './cryptosat_logo.svg';
+import Menu from './Menu.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBars,
+  faChevronDoubleRight,
+  faChevronDoubleLeft
+} from '@fortawesome/pro-light-svg-icons';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -15,13 +19,13 @@ class NavBar extends React.Component {
     this.togglePanel = this.togglePanel.bind(this);
     this.state = {
       menuVisible: false,
-      easterEgg: false,
+      easterEgg: false
     };
 
-    window.document.addEventListener("keydown", (e) => {
+    window.document.addEventListener('keydown', e => {
       if (e.altKey && e.ctrlKey) {
         this.setState({
-          easterEgg: true,
+          easterEgg: true
         });
       }
     });
@@ -29,7 +33,7 @@ class NavBar extends React.Component {
 
   setMenuVisible(visible) {
     this.setState({
-      menuVisible: visible,
+      menuVisible: visible
     });
   }
 
@@ -44,17 +48,17 @@ class NavBar extends React.Component {
 
   fileBug(e) {
     e.stopPropagation();
-    window.open("https://github.com/cryptosat/cryptosim-tutorial/issues/new");
+    window.open('https://github.com/cryptosat/cryptosim-tutorial/issues/new');
   }
 
   render() {
-    const href = this.state.easterEgg ? "/multisat" : "/";
+    const href = this.state.easterEgg ? '/multisat' : '/';
     if (this.props.isPannelCollapse) {
       return (
         <div className="navbar" style={{}}>
           <div className="actions-container">
             <button onClick={this.togglePanel}>
-              <FontAwesomeIcon icon={faChevronDoubleRight} />
+              <FontAwesomeIcon icon={faChevronDoubleRight} size="lg" />
             </button>
           </div>
         </div>
@@ -69,20 +73,20 @@ class NavBar extends React.Component {
         <div className="navbar" style={{}}>
           <div className="actions-container">
             <button onClick={this.toggleMenu}>
-              <FontAwesomeIcon color="white" icon={faBars} />
+              <FontAwesomeIcon color="white" icon={faBars} size="lg" />
             </button>
           </div>
 
           <div className="title-container">
             <Link to={href}>
               <img src={logo} alt="" />
-              Crytposat <b>Simulator</b>
+              Crytposat Simulator
             </Link>
           </div>
 
           <div className="actions-container">
             <button onClick={this.togglePanel}>
-              <FontAwesomeIcon icon={faChevronDoubleRight} />
+              <FontAwesomeIcon icon={faChevronDoubleLeft} size="lg" />
             </button>
           </div>
         </div>

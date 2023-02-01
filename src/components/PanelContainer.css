@@ -7,6 +7,11 @@
   z-index: 2;
 }
 
+.collapsed {
+  width: 90px;
+  position: relative;
+}
+
 .instructions-container {
   flex: 1;
   overflow-y: hidden; /* hide vertical scrollbar on chrome for windows */
@@ -15,5 +20,9 @@
 @media (min-width: 1512px) {
   .content-container__left {
     width: 508px;
+  }
+
+  .collapsed {
+    width: 100px;
   }
 }

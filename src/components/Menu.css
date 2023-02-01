@@ -94,6 +94,11 @@
   opacity: 0;
 }
 
+.active {
+  position: absolute;
+  left: -20px;
+}
+
 @media (min-width: 1512px) {
   #sideMenu {
     width: 508px;

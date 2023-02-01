@@ -5,11 +5,16 @@
   flex-direction: column;
   background-color: #02000e;
   z-index: 2;
+  position: relative; 
+  overflow-y: hidden; /* prevents whole page from scrolling when the dots on the Lesson background overflow */
 }
 
 .collapsed {
   width: 90px;
-  position: relative;
+}
+
+.collapsed .apply-dots {
+  display: none;
 }
 
 .instructions-container {

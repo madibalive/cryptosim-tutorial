@@ -1,48 +1,45 @@
 .code-snippet pre {
-  display: inline-block;
+  display: flex;
   width: 100%;
   box-sizing: border-box;
   background: #292D36;
-  border: 1px solid #31353E;
-  border-left: 3px solid #7A63F2;
   line-height: 1.6;
   margin-bottom: 1.6em;
   margin-right: 10px;
   max-width: 100%;
-  padding-top: 10px;
-  padding-right: 12px;
-  padding-bottom: 10px;
-  padding-left: 12px;
-  color: rgb(152, 152, 152);
-  /*color: #666;*/
+  padding: 1rem;
+  padding-right: 0; /* make space for paste icon on right side */
+  /* color: rgb(152, 152, 152); */
+  color: #f4f4f4;
   page-break-inside: avoid;
-  font-family: "Menlo", consolas, monospace;
+  font-family: "IBM Plex Mono", consolas, monospace;
 }
 
 .code-snippet code {
-  float: left;
-  width: calc(100% - 20px);
+  width: calc(100% - 60px);
+  font-size: 1.125em;
   overflow-x: scroll;
-  overflow-y: scroll;
+  overflow-y: hidden; /* height automatically adjusts so hide scrollbar on chrome for windows */
   word-wrap: break-word;
 }
 
-.code-snippet icon-container {
-  display: inline-block;
-  width:  20px;
+.code-snippet .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
+  /* width:  20px; */
 }
 
 .code-snippet button {
-  color: #777E8B;
+  color: #f4f4f4;
   background: none;
   border-style: none;
   padding: 10px;
-  width: 14px;
-  height: 16px;
-  position: relative;
+  font-size: 1.2em;
+  /* width: 14px; */
+  /* height: 16px; */
   cursor: pointer;
-  top: -4px;
-  left: -5px;
 }
 
 .code-snippet button:hover {

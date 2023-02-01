@@ -179,9 +179,6 @@ class App extends React.Component {
     const routes = this.createRoutes();
     return (
       <div className='main'>
-        <div className='nav-container'>
-          <NavBar />
-        </div>
         <div className='content'>
           <PanelContainer>
             <Console theme='dark' payload={this.payload}/>

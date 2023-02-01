@@ -65,6 +65,18 @@
   /* align-self: flex-end; */
   color: #f4fff4;
 }
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #fff;
+  display: flex;
+}
+.progress-done {
+  background-color: #1ef9fa;
+}
+.progress-left {
+  flex: 1;
+}
 
 /* .pager .link-container.previous a:hover {
   background-color: #f4fff4;

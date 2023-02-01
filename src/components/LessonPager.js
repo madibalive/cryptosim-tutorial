@@ -13,11 +13,12 @@ class LessonPager extends React.Component {
     this.state = {
       currentPage: this.props.currentPage,
       totalPages: this.props.totalPages,
+      progressBarWidth: (this.props.currentPage / this.props.totalPages) * 100,
     };
   }
 
   render() {
-    const { currentPage, totalPages } = this.state;
+    const { currentPage, totalPages, progressBarWidth } = this.state;
     const { previous, next } = this.props;
 
     return (
@@ -46,6 +47,13 @@ class LessonPager extends React.Component {
               </Link>
             )}
           </div>
+        </div>
+        <div className="progress-bar">
+          <div
+            className="progress-done"
+            style={{ width: `${progressBarWidth}%` }}
+          />
+          <div className="progress-left" />
         </div>
       </div>
     );

@@ -13,6 +13,16 @@ body {
   overflow: hidden;
 }
 
+.mapboxgl-popup-content {
+  pointer-events: none !important;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  pointer-events: none !important;
+}
+
 /* .main .nav-container {
   z-index: 100;
   flex-grow: 0;

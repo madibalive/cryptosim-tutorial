@@ -39,7 +39,7 @@ body {
 .content-container__right {
   display: flex;
   flex: 1;
-  flex-direction: column-reverse;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
 }
@@ -66,10 +66,10 @@ body {
 }
 
 .map-container {
-  position: fixed;
-  left:  0;
-  top:  0;
-  width: 100vw;
+  position: relative;
+  flex: 1 1;
+  margin-bottom: -30px; /* hiding the mapbox logo at the bottom of the map */
+  z-index: 0;
 }
 
 .mapboxgl-ctrl-attrib-inner {
